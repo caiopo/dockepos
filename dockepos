@@ -5,4 +5,5 @@ docker run -t --rm \
 -v "/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 -e "DISPLAY" \
 -u $(id -u):$(id -g) \
+caiopo/dockepos \
 $@
