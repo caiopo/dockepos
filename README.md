@@ -6,7 +6,7 @@ Docker container with the complete EPOS toolchain
 ```
 git clone git@github.com:caiopo/dockepos.git
 cd dockepos
-docker build <image-tag> .
+docker build . -t <image-tag>
 ```
 
 ### Running
