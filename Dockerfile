@@ -12,6 +12,7 @@ RUN apt-get update && \
         g++-multilib \
         gcc-multilib \
         gdb \
+        gdb-multiarch \
         make \
         python3 \
         python3-pip \
@@ -40,6 +41,8 @@ RUN wget -q -O arm.tar.gz https://epos.lisha.ufsc.br/dl468 && \
     mkdir -p /usr/local/arm/ && \
     mv gcc-7.2.0 /usr/local/arm/ && \
     rm -r arm.tar.gz
+
+ENV PATH="${PATH}:/usr/local/arm/gcc-7.2.0/bin/"
 
 VOLUME /code
 WORKDIR /code

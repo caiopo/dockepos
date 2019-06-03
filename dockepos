@@ -1,9 +1,10 @@
 #! /bin/bash
 
-docker run -t --rm \
+docker run -it --rm \
 -v $(pwd):/code \
 -v "/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 -e "DISPLAY" \
+-e 'QEMU_AUDIO_DRV=none' \
 -u $(id -u):$(id -g) \
 caiopo/dockepos \
 $@
