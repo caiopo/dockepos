@@ -1,8 +1,9 @@
-FROM ubuntu:bionic
-
-MAINTAINER caiopoliveira@gmail.com
+FROM ubuntu:focal
 
 WORKDIR /home
+
+ENV TZ=America/Sao_Paulo
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ
 
 RUN apt-get update && \
     apt-get install -y \
